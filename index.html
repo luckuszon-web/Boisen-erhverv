@@ -301,46 +301,48 @@
         </ul>
       </div>
 
-      <form class="wanted-form" action="https://www.emailmeform.com/fid.php?formid=592004" method="post" enctype="multipart/form-data" accept-charset="UTF-8">
+      <form class="wanted-form" action="https://formspree.io/f/xbgdbywo" method="post" accept-charset="UTF-8">
+        <input type="hidden" name="_subject" value="Ny henvendelse fra boisen-erhverv.dk">
+
         <fieldset>
           <legend>Hvad søger du?</legend>
 
           <label class="field">
             <span>Ønsket beliggenhed</span>
-            <input type="text" name="FieldData0" placeholder="F.eks. Gentofte, Hellerup, Lyngby...">
+            <input type="text" name="beliggenhed" placeholder="F.eks. Gentofte, Hellerup, Lyngby...">
           </label>
 
           <div class="field-grid">
             <label class="checkbox-field">
               <span class="checkbox-row">
-                <input type="checkbox" name="FieldData1-0" value="Ja">
+                <input type="checkbox" name="lokale_kontor" value="Ja">
                 <span>Kontor</span>
               </span>
-              <input type="text" name="FieldData5" placeholder="Kvm" inputmode="numeric">
+              <input type="text" name="kontor_kvm" placeholder="Kvm" inputmode="numeric">
             </label>
 
             <label class="checkbox-field">
               <span class="checkbox-row">
-                <input type="checkbox" name="FieldData2-0" value="Ja">
+                <input type="checkbox" name="lokale_lager" value="Ja">
                 <span>Lager</span>
               </span>
-              <input type="text" name="FieldData6" placeholder="Kvm" inputmode="numeric">
+              <input type="text" name="lager_kvm" placeholder="Kvm" inputmode="numeric">
             </label>
 
             <label class="checkbox-field">
               <span class="checkbox-row">
-                <input type="checkbox" name="FieldData3-0" value="Ja">
+                <input type="checkbox" name="lokale_produktion" value="Ja">
                 <span>Produktion</span>
               </span>
-              <input type="text" name="FieldData7" placeholder="Kvm" inputmode="numeric">
+              <input type="text" name="produktion_kvm" placeholder="Kvm" inputmode="numeric">
             </label>
 
             <label class="checkbox-field">
               <span class="checkbox-row">
-                <input type="checkbox" name="FieldData4-0" value="Ja">
+                <input type="checkbox" name="lokale_butik" value="Ja">
                 <span>Butik</span>
               </span>
-              <input type="text" name="FieldData8" placeholder="Kvm" inputmode="numeric">
+              <input type="text" name="butik_kvm" placeholder="Kvm" inputmode="numeric">
             </label>
           </div>
         </fieldset>
@@ -351,41 +353,41 @@
           <div class="field-grid field-grid-2">
             <label class="field">
               <span>Virksomhedstype</span>
-              <input type="text" name="FieldData9">
+              <input type="text" name="virksomhedstype">
             </label>
             <label class="field">
               <span>Navn</span>
-              <input type="text" name="FieldData10" required>
+              <input type="text" name="navn" required>
             </label>
             <label class="field">
               <span>Adresse</span>
-              <input type="text" name="FieldData11">
+              <input type="text" name="adresse">
             </label>
             <label class="field">
               <span>Postnummer &amp; by</span>
-              <input type="text" name="FieldData12">
+              <input type="text" name="postnummer_by">
             </label>
             <label class="field">
               <span>Kontaktperson</span>
-              <input type="text" name="FieldData13">
+              <input type="text" name="kontaktperson">
             </label>
             <label class="field">
               <span>Telefon</span>
-              <input type="tel" name="FieldData14">
+              <input type="tel" name="telefon">
             </label>
             <label class="field field-span">
               <span>E-mail</span>
-              <input type="email" name="FieldData15" required>
+              <input type="email" name="email" required>
             </label>
           </div>
 
           <label class="field field-span">
             <span>Kommentar</span>
-            <textarea name="FieldData16" rows="4"></textarea>
+            <textarea name="kommentar" rows="4"></textarea>
           </label>
         </fieldset>
 
-        <input type="text" name="hida2" value="" maxlength="100" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="text" name="_gotcha" value="" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
 
         <button type="submit" class="btn btn-primary btn-wide">Send formular</button>
       </form>
