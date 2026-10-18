@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://boisen-erhverv.dk/sitemap.xml
