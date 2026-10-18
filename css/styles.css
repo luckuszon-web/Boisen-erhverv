@@ -424,6 +424,30 @@ textarea{ resize: vertical; }
 
 .hp-field{ position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 
+.form-notice{
+  display: none;
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: .95rem;
+}
+.form-notice:not(:empty){ display: block; }
+.form-notice-success{ background: #e9f7ef; color: #1f6f4d; border: 1px solid #b7e4c7; }
+.form-notice-error{ background: var(--brand-tint); color: var(--brand); border: 1px solid var(--brand-light); }
+
+.field-error{
+  display: block;
+  color: var(--brand);
+  font-size: .8rem;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+input[aria-invalid="true"], textarea[aria-invalid="true"]{ border-color: var(--brand); }
+
+.btn:disabled{ opacity: .6; cursor: not-allowed; }
+
 /* ---------- Footer ---------- */
 .site-footer{ background: var(--ink); color: rgba(255,255,255,.75); }
 .footer-inner{

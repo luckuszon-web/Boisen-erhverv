@@ -301,7 +301,10 @@
         </ul>
       </div>
 
-      <form class="wanted-form" action="https://formspree.io/f/xbgdbywo" method="post" accept-charset="UTF-8">
+      <div data-fs-success class="form-notice form-notice-success"></div>
+      <div data-fs-error class="form-notice form-notice-error"></div>
+
+      <form class="wanted-form" id="wanted-form" action="https://formspree.io/f/xbgdbywo" method="post" accept-charset="UTF-8">
         <input type="hidden" name="_subject" value="Ny henvendelse fra boisen-erhverv.dk">
 
         <fieldset>
@@ -309,7 +312,7 @@
 
           <label class="field">
             <span>Ønsket beliggenhed</span>
-            <input type="text" name="beliggenhed" placeholder="F.eks. Gentofte, Hellerup, Lyngby...">
+            <input type="text" name="beliggenhed" placeholder="F.eks. Gentofte, Hellerup, Lyngby..." data-fs-field>
           </label>
 
           <div class="field-grid">
@@ -318,7 +321,7 @@
                 <input type="checkbox" name="lokale_kontor" value="Ja">
                 <span>Kontor</span>
               </span>
-              <input type="text" name="kontor_kvm" placeholder="Kvm" inputmode="numeric">
+              <input type="text" name="kontor_kvm" placeholder="Kvm" inputmode="numeric" data-fs-field>
             </label>
 
             <label class="checkbox-field">
@@ -326,7 +329,7 @@
                 <input type="checkbox" name="lokale_lager" value="Ja">
                 <span>Lager</span>
               </span>
-              <input type="text" name="lager_kvm" placeholder="Kvm" inputmode="numeric">
+              <input type="text" name="lager_kvm" placeholder="Kvm" inputmode="numeric" data-fs-field>
             </label>
 
             <label class="checkbox-field">
@@ -334,7 +337,7 @@
                 <input type="checkbox" name="lokale_produktion" value="Ja">
                 <span>Produktion</span>
               </span>
-              <input type="text" name="produktion_kvm" placeholder="Kvm" inputmode="numeric">
+              <input type="text" name="produktion_kvm" placeholder="Kvm" inputmode="numeric" data-fs-field>
             </label>
 
             <label class="checkbox-field">
@@ -342,7 +345,7 @@
                 <input type="checkbox" name="lokale_butik" value="Ja">
                 <span>Butik</span>
               </span>
-              <input type="text" name="butik_kvm" placeholder="Kvm" inputmode="numeric">
+              <input type="text" name="butik_kvm" placeholder="Kvm" inputmode="numeric" data-fs-field>
             </label>
           </div>
         </fieldset>
@@ -353,43 +356,45 @@
           <div class="field-grid field-grid-2">
             <label class="field">
               <span>Virksomhedstype</span>
-              <input type="text" name="virksomhedstype">
+              <input type="text" name="virksomhedstype" data-fs-field>
             </label>
             <label class="field">
               <span>Navn</span>
-              <input type="text" name="navn" required>
+              <input type="text" name="navn" required data-fs-field>
+              <span data-fs-error="navn" class="field-error"></span>
             </label>
             <label class="field">
               <span>Adresse</span>
-              <input type="text" name="adresse">
+              <input type="text" name="adresse" data-fs-field>
             </label>
             <label class="field">
               <span>Postnummer &amp; by</span>
-              <input type="text" name="postnummer_by">
+              <input type="text" name="postnummer_by" data-fs-field>
             </label>
             <label class="field">
               <span>Kontaktperson</span>
-              <input type="text" name="kontaktperson">
+              <input type="text" name="kontaktperson" data-fs-field>
             </label>
             <label class="field">
               <span>Telefon</span>
-              <input type="tel" name="telefon">
+              <input type="tel" name="telefon" data-fs-field>
             </label>
             <label class="field field-span">
               <span>E-mail</span>
-              <input type="email" name="email" required>
+              <input type="email" name="email" required data-fs-field>
+              <span data-fs-error="email" class="field-error"></span>
             </label>
           </div>
 
           <label class="field field-span">
             <span>Kommentar</span>
-            <textarea name="kommentar" rows="4"></textarea>
+            <textarea name="kommentar" rows="4" data-fs-field></textarea>
           </label>
         </fieldset>
 
         <input type="text" name="_gotcha" value="" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
 
-        <button type="submit" class="btn btn-primary btn-wide">Send formular</button>
+        <button type="submit" class="btn btn-primary btn-wide" data-fs-submit-btn>Send formular</button>
       </form>
     </div>
   </section>
@@ -429,5 +434,10 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script>
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#wanted-form', formId: 'xbgdbywo' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>
