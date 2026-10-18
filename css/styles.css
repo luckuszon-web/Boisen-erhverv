@@ -234,6 +234,8 @@ p{ margin: 0 0 1em; color: var(--ink-soft); }
 .section-lede{ max-width: 62ch; font-size: 1.05rem; }
 #om-os{ background: var(--paper-alt); }
 .wanted{ background: var(--paper-alt); }
+.services{ padding-bottom: 48px; }
+.listings{ padding-top: 48px; }
 
 .grid{ display: grid; gap: 24px; }
 
@@ -750,6 +752,8 @@ input[aria-invalid="true"], textarea[aria-invalid="true"]{ border-color: var(--b
   .services-grid, .listings-grid{ grid-template-columns: 1fr; }
   .field-grid, .field-grid-2{ grid-template-columns: 1fr; }
   .section{ padding-block: 64px; }
+  .services{ padding-bottom: 32px; }
+  .listings{ padding-top: 32px; }
   .hero-inner{ padding-block: 96px 72px; }
 
   .gallery-main{ aspect-ratio: 4/3; }
