@@ -457,8 +457,8 @@ input[aria-invalid="true"], textarea[aria-invalid="true"]{ border-color: var(--b
   flex-wrap: wrap;
   padding-block: 56px 32px;
 }
-.footer-brand{ display: flex; gap: 14px; max-width: 340px; }
-.footer-brand img{ border-radius: 6px; }
+.footer-brand{ display: flex; align-items: center; gap: 20px; max-width: 420px; }
+.footer-brand img{ flex-shrink: 0; }
 .footer-name{ color: #fff; font-weight: 700; margin-bottom: .3em; }
 .footer-tag{ font-size: .85rem; margin-bottom: 0; }
 .footer-cols{ display: flex; gap: 64px; flex-wrap: wrap; }
