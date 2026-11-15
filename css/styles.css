@@ -295,6 +295,25 @@ p{ margin: 0 0 1em; color: var(--ink-soft); }
 }
 .badge-salg{ background: #1f6f4d; }
 .badge-afst{ background: #a5680f; }
+.badge-solgt{ background: #3a3a3a; }
+
+.sold-ribbon{
+  position: absolute;
+  top: 20px;
+  right: -42px;
+  width: 170px;
+  padding: 7px 0;
+  background: var(--brand);
+  color: #fff;
+  font-size: .82rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-align: center;
+  text-transform: uppercase;
+  transform: rotate(45deg);
+  box-shadow: 0 2px 8px rgba(0,0,0,.3);
+  z-index: 2;
+}
 .listing-body{ padding: 22px; }
 .listing-body h3{ font-size: 1.1rem; margin-bottom: .2em; }
 .listing-meta{ font-size: .82rem; color: var(--brand); font-weight: 600; margin-bottom: .8em; }
